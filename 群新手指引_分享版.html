@@ -22,11 +22,25 @@
     position: fixed;
     inset: 0;
     background:
-      radial-gradient(ellipse at 20% 10%, rgba(139,115,85,0.06) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 90%, rgba(139,115,85,0.05) 0%, transparent 60%),
-      radial-gradient(ellipse at 50% 50%, rgba(196,30,58,0.03) 0%, transparent 70%);
+      radial-gradient(ellipse at 15% 8%, rgba(80,60,40,0.08) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 92%, rgba(80,60,40,0.06) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 50%, rgba(196,30,58,0.03) 0%, transparent 70%),
+      radial-gradient(circle at 30% 40%, rgba(60,40,20,0.04) 0%, transparent 40%),
+      radial-gradient(circle at 70% 60%, rgba(60,40,20,0.03) 0%, transparent 40%);
     pointer-events: none;
     z-index: 0;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+      repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(139,115,85,0.03) 80px, rgba(139,115,85,0.03) 81px),
+      repeating-linear-gradient(90deg, transparent, transparent 120px, rgba(139,115,85,0.02) 120px, rgba(139,115,85,0.02) 121px);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
   }
 
   .hero {
@@ -289,7 +303,7 @@
     </div>
     <div class="tier super">
       <div class="tier-name">超级 VIP</div>
-      <div class="tier-price">300 缘</div>
+      <div class="tier-price">600 缘</div>
       <div class="tier-desc">除 VIP 全部权益外<br>新增中午一节私教交流会<br>道长细致指导</div>
     </div>
   </div>
