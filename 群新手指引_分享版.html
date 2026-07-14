@@ -22,11 +22,13 @@
     position: fixed;
     inset: 0;
     background:
-      radial-gradient(ellipse at 10% 5%, rgba(80,60,40,0.15) 0%, transparent 50%),
-      radial-gradient(ellipse at 90% 95%, rgba(80,60,40,0.12) 0%, transparent 50%),
-      radial-gradient(ellipse at 25% 70%, rgba(60,40,20,0.1) 0%, transparent 45%),
-      radial-gradient(ellipse at 75% 30%, rgba(60,40,20,0.08) 0%, transparent 45%),
-      radial-gradient(circle at 50% 50%, rgba(196,30,58,0.04) 0%, transparent 65%);
+      /* 四角墨韵晕染 */
+      radial-gradient(ellipse 500px 300px at 0% 0%, rgba(60,40,20,0.12), transparent 60%),
+      radial-gradient(ellipse 500px 300px at 100% 0%, rgba(60,40,20,0.08), transparent 60%),
+      radial-gradient(ellipse 500px 300px at 0% 100%, rgba(60,40,20,0.1), transparent 60%),
+      radial-gradient(ellipse 500px 300px at 100% 100%, rgba(60,40,20,0.09), transparent 60%),
+      /* 中心淡墨 */
+      radial-gradient(circle at 50% 50%, rgba(196,30,58,0.03), transparent 65%);
     pointer-events: none;
     z-index: 0;
   }
@@ -36,11 +38,15 @@
     position: fixed;
     inset: 0;
     background-image:
-      repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(139,115,85,0.06) 60px, rgba(139,115,85,0.06) 61px),
-      repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(139,115,85,0.04) 100px, rgba(139,115,85,0.04) 101px),
-      radial-gradient(ellipse 600px 400px at 15% 20%, rgba(60,40,20,0.08), transparent),
-      radial-gradient(ellipse 500px 300px at 85% 80%, rgba(60,40,20,0.06), transparent),
-      radial-gradient(circle 200px at 40% 55%, rgba(139,115,85,0.05), transparent);
+      /* 宣纸纹理 */
+      repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(139,115,85,0.05) 50px, rgba(139,115,85,0.05) 51px),
+      repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(139,115,85,0.03) 80px, rgba(139,115,85,0.03) 81px),
+      /* 远山淡影（底部） */
+      linear-gradient(to top, rgba(60,40,20,0.08) 0%, transparent 30%),
+      /* 溅墨点 */
+      radial-gradient(circle 120px at 15% 25%, rgba(60,40,20,0.06), transparent),
+      radial-gradient(circle 80px at 85% 70%, rgba(60,40,20,0.05), transparent),
+      radial-gradient(circle 60px at 45% 60%, rgba(60,40,20,0.04), transparent);
     pointer-events: none;
     z-index: 0;
   }
@@ -48,7 +54,7 @@
   .hero {
     position: relative;
     text-align: center;
-    padding: 24px 20px 30px;
+    padding: 0 20px 16px;
     z-index: 1;
   }
   .hero::after {
@@ -57,7 +63,7 @@
     width: 60px;
     height: 2px;
     background: linear-gradient(90deg, transparent, #c41e3a, transparent);
-    margin: 24px auto 0;
+    margin: 8px auto 0;
   }
   .hero h1 {
     font-family: "Ma Shan Zheng", "KaiTi", cursive;
@@ -65,11 +71,14 @@
     font-weight: 400;
     color: #1a1a1a;
     letter-spacing: 6px;
+    line-height: 1;
+    margin: -0.08em 0 0 0;
+    padding-top: 0;
   }
   .hero .subtitle {
     font-size: 0.95rem;
     color: #8b7355;
-    margin-top: 10px;
+    margin-top: 4px;
     letter-spacing: 3px;
   }
 
@@ -162,7 +171,7 @@
   .master-info .dao { font-size: 0.85rem; color: #8b7355; margin-top: 4px; }
 
   .tags {
-    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px;
   }
   .tags span {
     font-size: 0.78rem;
@@ -258,57 +267,6 @@
 </style>
 </head>
 <body>
-
-<svg class="mountains-far" viewBox="0 0 1200 400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <filter id="inkBlur"><feGaussianBlur stdDeviation="8"/></filter>
-    <filter id="inkBlur2"><feGaussianBlur stdDeviation="4"/></filter>
-    <linearGradient id="fadeUp" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#3a3028" stop-opacity="0.12"/><stop offset="100%" stop-color="#3a3028" stop-opacity="0"/></linearGradient>
-  </defs>
-  <!-- 远山轮廓 -->
-  <path d="M0 400 L0 300 Q60 220 130 260 Q180 200 240 230 Q300 160 370 210 Q420 140 500 190 Q550 130 620 180 Q680 120 750 170 Q820 100 900 160 Q950 110 1020 150 Q1080 90 1140 150 Q1180 120 1200 160 L1200 400Z" fill="url(#fadeUp)" filter="url(#inkBlur)" opacity="0.5"/>
-  <path d="M0 400 L0 320 Q100 280 200 310 Q320 240 430 290 Q520 230 610 280 Q700 220 800 270 Q880 210 960 260 Q1040 230 1100 270 Q1150 250 1200 280 L1200 400Z" fill="url(#fadeUp)" filter="url(#inkBlur2)" opacity="0.35"/>
-</svg>
-
-<svg class="mountains-near" viewBox="0 0 1200 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fadeUp2" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#2c2416" stop-opacity="0.1"/><stop offset="100%" stop-color="#2c2416" stop-opacity="0"/></linearGradient>
-  </defs>
-  <!-- 近山 -->
-  <path d="M0 300 L0 220 Q80 180 150 200 Q250 140 350 190 Q450 130 540 180 Q620 120 720 170 Q820 110 920 160 Q1020 130 1100 170 Q1150 150 1200 180 L1200 300Z" fill="url(#fadeUp2)" filter="url(#inkBlur)" opacity="0.6"/>
-  <!-- 飞鸟 -->
-  <g stroke="#4a3f35" stroke-width="1.5" fill="none" opacity="0.25">
-    <path d="M280 140 Q290 130 300 140 Q310 130 320 140"/>
-    <path d="M330 120 Q338 112 345 120 Q352 112 360 120"/>
-    <path d="M260 155 Q270 147 280 155 Q290 147 300 155"/>
-  </g>
-</svg>
-
-<!-- 墨点溅射 -->
-<svg class="ink-splatter" style="top:12%;left:8%;width:180px;height:180px;opacity:0.06" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="60" fill="#3a3028" filter="url(#inkBlur)"/>
-  <circle cx="70" cy="70" r="20" fill="#3a3028" opacity="0.3"/>
-  <circle cx="130" cy="80" r="15" fill="#3a3028" opacity="0.2"/>
-  <circle cx="60" cy="120" r="10" fill="#3a3028" opacity="0.15"/>
-</svg>
-
-<svg class="ink-splatter" style="bottom:20%;right:5%;width:220px;height:220px;opacity:0.05" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="70" fill="#3a3028" filter="url(#inkBlur)"/>
-  <circle cx="140" cy="70" r="25" fill="#3a3028" opacity="0.25"/>
-  <circle cx="60" cy="130" r="18" fill="#3a3028" opacity="0.2"/>
-  <circle cx="130" cy="140" r="12" fill="#3a3028" opacity="0.15"/>
-  <circle cx="80" cy="50" r="8" fill="#3a3028" opacity="0.1"/>
-</svg>
-
-<svg class="ink-splatter" style="top:45%;left:75%;width:120px;height:120px;opacity:0.04" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="50" fill="#3a3028" filter="url(#inkBlur)"/>
-</svg>
-
-<svg class="ink-splatter" style="top:60%;left:3%;width:100px;height:100px;opacity:0.04" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="40" fill="#3a3028" filter="url(#inkBlur)"/>
-</svg>
-
-
 <div class="hero">
   <h1>武当武术交流群</h1>
   <div class="subtitle">入 世 指 南</div>
