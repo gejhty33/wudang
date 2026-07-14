@@ -22,11 +22,11 @@
     position: fixed;
     inset: 0;
     background:
-      radial-gradient(ellipse at 15% 8%, rgba(80,60,40,0.08) 0%, transparent 55%),
-      radial-gradient(ellipse at 85% 92%, rgba(80,60,40,0.06) 0%, transparent 55%),
-      radial-gradient(ellipse at 50% 50%, rgba(196,30,58,0.03) 0%, transparent 70%),
-      radial-gradient(circle at 30% 40%, rgba(60,40,20,0.04) 0%, transparent 40%),
-      radial-gradient(circle at 70% 60%, rgba(60,40,20,0.03) 0%, transparent 40%);
+      radial-gradient(ellipse at 10% 5%, rgba(80,60,40,0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 90% 95%, rgba(80,60,40,0.12) 0%, transparent 50%),
+      radial-gradient(ellipse at 25% 70%, rgba(60,40,20,0.1) 0%, transparent 45%),
+      radial-gradient(ellipse at 75% 30%, rgba(60,40,20,0.08) 0%, transparent 45%),
+      radial-gradient(circle at 50% 50%, rgba(196,30,58,0.04) 0%, transparent 65%);
     pointer-events: none;
     z-index: 0;
   }
@@ -35,12 +35,14 @@
     content: "";
     position: fixed;
     inset: 0;
-    background:
-      repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(139,115,85,0.03) 80px, rgba(139,115,85,0.03) 81px),
-      repeating-linear-gradient(90deg, transparent, transparent 120px, rgba(139,115,85,0.02) 120px, rgba(139,115,85,0.02) 121px);
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(139,115,85,0.06) 60px, rgba(139,115,85,0.06) 61px),
+      repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(139,115,85,0.04) 100px, rgba(139,115,85,0.04) 101px),
+      radial-gradient(ellipse 600px 400px at 15% 20%, rgba(60,40,20,0.08), transparent),
+      radial-gradient(ellipse 500px 300px at 85% 80%, rgba(60,40,20,0.06), transparent),
+      radial-gradient(circle 200px at 40% 55%, rgba(139,115,85,0.05), transparent);
     pointer-events: none;
     z-index: 0;
-    opacity: 0.6;
   }
 
   .hero {
