@@ -259,6 +259,56 @@
 </head>
 <body>
 
+<svg class="mountains-far" viewBox="0 0 1200 400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="inkBlur"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="inkBlur2"><feGaussianBlur stdDeviation="4"/></filter>
+    <linearGradient id="fadeUp" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#3a3028" stop-opacity="0.12"/><stop offset="100%" stop-color="#3a3028" stop-opacity="0"/></linearGradient>
+  </defs>
+  <!-- 远山轮廓 -->
+  <path d="M0 400 L0 300 Q60 220 130 260 Q180 200 240 230 Q300 160 370 210 Q420 140 500 190 Q550 130 620 180 Q680 120 750 170 Q820 100 900 160 Q950 110 1020 150 Q1080 90 1140 150 Q1180 120 1200 160 L1200 400Z" fill="url(#fadeUp)" filter="url(#inkBlur)" opacity="0.5"/>
+  <path d="M0 400 L0 320 Q100 280 200 310 Q320 240 430 290 Q520 230 610 280 Q700 220 800 270 Q880 210 960 260 Q1040 230 1100 270 Q1150 250 1200 280 L1200 400Z" fill="url(#fadeUp)" filter="url(#inkBlur2)" opacity="0.35"/>
+</svg>
+
+<svg class="mountains-near" viewBox="0 0 1200 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fadeUp2" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#2c2416" stop-opacity="0.1"/><stop offset="100%" stop-color="#2c2416" stop-opacity="0"/></linearGradient>
+  </defs>
+  <!-- 近山 -->
+  <path d="M0 300 L0 220 Q80 180 150 200 Q250 140 350 190 Q450 130 540 180 Q620 120 720 170 Q820 110 920 160 Q1020 130 1100 170 Q1150 150 1200 180 L1200 300Z" fill="url(#fadeUp2)" filter="url(#inkBlur)" opacity="0.6"/>
+  <!-- 飞鸟 -->
+  <g stroke="#4a3f35" stroke-width="1.5" fill="none" opacity="0.25">
+    <path d="M280 140 Q290 130 300 140 Q310 130 320 140"/>
+    <path d="M330 120 Q338 112 345 120 Q352 112 360 120"/>
+    <path d="M260 155 Q270 147 280 155 Q290 147 300 155"/>
+  </g>
+</svg>
+
+<!-- 墨点溅射 -->
+<svg class="ink-splatter" style="top:12%;left:8%;width:180px;height:180px;opacity:0.06" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="60" fill="#3a3028" filter="url(#inkBlur)"/>
+  <circle cx="70" cy="70" r="20" fill="#3a3028" opacity="0.3"/>
+  <circle cx="130" cy="80" r="15" fill="#3a3028" opacity="0.2"/>
+  <circle cx="60" cy="120" r="10" fill="#3a3028" opacity="0.15"/>
+</svg>
+
+<svg class="ink-splatter" style="bottom:20%;right:5%;width:220px;height:220px;opacity:0.05" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="70" fill="#3a3028" filter="url(#inkBlur)"/>
+  <circle cx="140" cy="70" r="25" fill="#3a3028" opacity="0.25"/>
+  <circle cx="60" cy="130" r="18" fill="#3a3028" opacity="0.2"/>
+  <circle cx="130" cy="140" r="12" fill="#3a3028" opacity="0.15"/>
+  <circle cx="80" cy="50" r="8" fill="#3a3028" opacity="0.1"/>
+</svg>
+
+<svg class="ink-splatter" style="top:45%;left:75%;width:120px;height:120px;opacity:0.04" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="50" fill="#3a3028" filter="url(#inkBlur)"/>
+</svg>
+
+<svg class="ink-splatter" style="top:60%;left:3%;width:100px;height:100px;opacity:0.04" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="40" fill="#3a3028" filter="url(#inkBlur)"/>
+</svg>
+
+
 <div class="hero">
   <h1>武当武术交流群</h1>
   <div class="subtitle">入 世 指 南</div>
